@@ -1,0 +1,13 @@
+#!/usr/bin/env python3
+from anon import anonymize_text
+import sys
+
+def main():
+    if len(sys.argv) < 2:
+        print("Usage: pynon '<text to anonymize>'", file=sys.stderr)
+        sys.exit(1)
+    input_text = sys.argv[1]
+    print(anonymize_text(input_text))
+
+if __name__ == "__main__":
+    main()

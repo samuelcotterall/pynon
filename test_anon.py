@@ -1,7 +1,5 @@
-from anon import anonymize_text
 
 from anon import anonymize_text
-
 
 def test_anonymize_text_removes_pii():
     text = "My name is John Doe and my phone number is 555-123-4567."
@@ -9,9 +7,6 @@ def test_anonymize_text_removes_pii():
     # Presidio replaces PII with <PERSON> and <PHONE_NUMBER> or similar
     assert "John Doe" not in result
     assert "555-123-4567" not in result
-    assert result != text
-
-
 
 def test_anonymize_text_no_pii():
     text = "This is a generic sentence with no PII."

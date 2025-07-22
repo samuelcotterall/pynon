@@ -3,13 +3,9 @@
 # Requirements: presidio-analyzer, presidio-anonymizer
 
 
-
 from presidio_analyzer import AnalyzerEngine
 from presidio_anonymizer import AnonymizerEngine
 from presidio_analyzer.nlp_engine import NlpEngineProvider
-
-
-
 
 def anonymize_text(text):
     # Use Presidio's NlpEngineProvider to load spaCy model
@@ -36,8 +32,6 @@ def anonymize_text(text):
         text=text, analyzer_results=results
     )
     return anonymized_result.text
-
-
 
 if __name__ == "__main__":
     import sys
